@@ -8,6 +8,9 @@ A collection of AI experiments, implementations, and learning projects. This rep
 - **Neural Networks** - Custom neural network implementations and experiments
 - **Vision Transformer** - CLIP model implementations and vision transformer exploration
 
+### MCPs
+- **GDS-MCP** - Model component prototypes and tools for generating accessible GOV.UK-style component patterns
+
 ### RAG (Retrieval-Augmented Generation)
 A complete RAG system with:
 - Document ingestion pipeline
