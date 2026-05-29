@@ -8,3 +8,7 @@ This skill assists in stakeholder analysis by creating a power-interest matrix, 
 
 ## write-adr.skill
 This skill helps teams draft an Architecture Decision Record (ADR) by capturing the context, decision rationale, alternatives considered, and consequences for significant technical choices. It supports consistent documentation, clearer communication across engineering stakeholders, and better long-term traceability of architecture decisions.
+
+# Commands
+## create-worktree.md
+This Claude Code command helps automate creating a new Git worktree, enabling faster branch workflows and parallel context switches across repositories.
