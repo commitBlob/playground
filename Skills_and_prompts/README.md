@@ -15,3 +15,4 @@ This Claude Code command helps automate creating a new Git worktree, enabling fa
 
 ## merge-worktree.md
 This Claude Code command helps merge changes from a worktree back into the main repository branch, simplifying cleanup and integration for parallel Git workflows.
+
