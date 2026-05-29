@@ -12,3 +12,6 @@ This skill helps teams draft an Architecture Decision Record (ADR) by capturing 
 # Commands
 ## create-worktree.md
 This Claude Code command helps automate creating a new Git worktree, enabling faster branch workflows and parallel context switches across repositories.
+
+## merge-worktree.md
+This Claude Code command helps merge changes from a worktree back into the main repository branch, simplifying cleanup and integration for parallel Git workflows.
