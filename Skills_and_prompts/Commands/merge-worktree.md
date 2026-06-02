@@ -1,10 +1,23 @@
-Your task is to merge in the '$ARGUMENTS' worktree in the .trees/$ARGUMENTS folder.
+---
+allowed-tools: Bash(git:*)
+description: Merge the '$ARGUMENTS' worktree back into the main branch and clean up
+---
+
+## Runtime context
+- Existing worktrees: !`git worktree list`
+- Current branch: !`git branch --show-current`
+
+## Your task
+
+Merge the `$ARGUMENTS` worktree (located at `.trees/$ARGUMENTS`) into the current branch and clean up.
 
 Follow exactly these steps:
-1. Change into .trees/$ARGUMENTS directory
-2. Examin the changes that were made in the latest commit
-3. Change back to the root directory
-4. Merge in the worktree
-5. There might be merge conflicts. Use "git status", "git diff --name-only --diff-filter=U", or "git ls-files -u" to list files that have merge conflicts
-6. Manually resolve conflicts based on your knowledge of the changes
-7. Once merged delete $ARGUMENTS worktree and corresponding branch
+1. Change into `.trees/$ARGUMENTS` and examine the latest commit: `git log -1 --stat`
+2. Change back to the root project directory
+3. Merge the branch: `git merge $ARGUMENTS`
+4. If there are merge conflicts, identify them using `git status`, `git diff --name-only --diff-filter=U`, or `git ls-files -u`
+5. Manually resolve all conflicts based on your knowledge of the changes made in the worktree
+6. Stage resolved files and complete the merge commit
+7. Delete the worktree and its branch:
+   - `git worktree remove .trees/$ARGUMENTS`
+   - `git branch -d $ARGUMENTS`
