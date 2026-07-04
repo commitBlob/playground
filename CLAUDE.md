@@ -15,9 +15,7 @@ Always check which subdirectory you're working in before assuming a command or c
 
 ## Releases
 
-Releases are automated with semantic-release (`.github/workflows/release.yml` + `.releaserc.json`): every push to `main` scans commits since the last tag, and a releasable commit produces a git tag and a GitHub Release (with generated notes). Commit messages (or squash-merge PR titles) must follow Conventional Commits to trigger a release: `fix:` → patch, `feat:` → minor, `feat!:` or a `BREAKING CHANGE` footer → major. Other prefixes (`chore:`, `docs:`, etc.) and non-conventional messages release nothing.
-
-Note: `main` is a protected branch requiring PRs, so the release job does not commit a `CHANGELOG.md` back to `main` — the default `GITHUB_TOKEN` can't push past that protection. Release history lives on the GitHub Releases page instead.
+Releases are automated with semantic-release (`.github/workflows/release.yml` + `.releaserc.json`): every push to `main` scans commits since the last tag, and a releasable commit produces a git tag, an updated `CHANGELOG.md` committed back to `main`, and a GitHub Release. Commit messages (or squash-merge PR titles) must follow Conventional Commits to trigger a release: `fix:` → patch, `feat:` → minor, `feat!:` or a `BREAKING CHANGE` footer → major. Other prefixes (`chore:`, `docs:`, etc.) and non-conventional messages release nothing.
 
 ## MCP/GDS-MCP (TypeScript MCP server)
 
